@@ -1,0 +1,16 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+#June 6, 2018
+
+```{r map, echo=FALSE}
+leaflet() %>% 
+   addTiles() %>% 
+   setView( lng =  -90.5132700, lat = 14.6407200, zoom = 5 ) %>%
+   addMarkers(lng =  -90.5132700, lat = 14.6407200, popup = "I was born in Guatemala!")%>%
+   addProviderTiles("NASAGIBS.ViirsEarthAtNight2012")
+ 
+```
